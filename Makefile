@@ -40,6 +40,7 @@ dist: clean
 	rm -rf st-$(VERSION)
 
 install: st
+	git config --global --add safe.directory /home/tony/.local/src/st
 	git submodule init
 	git submodule update
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
